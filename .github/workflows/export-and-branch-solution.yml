@@ -1,17 +1,14 @@
 name: export-and-branch-solution
-# Export solution from DEV environment
-#  unpack it and prepare, commit and push a git branch with the changes
 
 on:
   workflow_dispatch:
     inputs:
+      request_id:
+        description: 'id of the request to worked on from Power Platform'
+        required: true
       solution_name:
         description: 'name of the solution to worked on from Power Platform'
-        required: true
-        default: ALMLab
-      solution-version:
-        description: 'version of solution to export'
-        required: false        
+        required: true   
       solution_exported_folder:
         description: 'folder name for staging the exported solution *do not change*'
         required: true
@@ -21,20 +18,21 @@ on:
         required: true
         default: out/solutions/
       solution_target_folder: 
-       description: 'folder name to be created and checked in *do not change*'
-       required: true
-       default: solutions/
+        description: 'folder name to be created and checked in *do not change*'
+        required: true
+        default: solutions/
 env:
-#edit your values here
   ENVIRONMENT_URL: 'https://ava-powerplatform-dev.crm.dynamics.com'
   CLIENT_ID: '03f7f8a4-7b34-4f76-8c12-90a1565ca4fb'
   TENANT_ID: 'd7f2ff81-6d1b-4b31-a5f4-806476fd7131'
+  WORKFLOW_URL: 'https://prod-62.westus.logic.azure.com:443/workflows/b228d7d3e3784e2abed7359a8902b901/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Kaoklk6L_8Xtxbq8kPVK639yDYCKWoI6cy0dUGjOPsE'
+  RUN_KEY: 'FSgWPsAEBDP6epQZ'
 permissions:
   contents: write
 jobs:
   export-from-dev:
     runs-on: windows-latest
-    # or you can say runs-on: ubuntu-latest
+
     env:
       RUNNER_DEBUG: 1
 
@@ -51,6 +49,12 @@ jobs:
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{env.TENANT_ID}}
 
+    - name: Log Start Export Solution
+      run: |
+        curl -X POST ${{env.WORKFLOW_URL}} \
+        -H "Content-Type: application/json" \
+        -H "RunKey: ${{env.RUN_KEY}}" \
+        -d '{"request": "${{ github.event.inputs.request_id }}","log": "Iniciando exportação da solução: ${{ github.event.inputs.solution_name }}..."}'
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
@@ -63,6 +67,13 @@ jobs:
         solution-version: ${{ github.event.inputs.solution_version }}
         solution-output-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
 
+    - name: Log End Export Solution
+      run: |
+        curl -X POST ${{env.WORKFLOW_URL}} \
+        -H "Content-Type: application/json" \
+        -H "RunKey: ${{env.RUN_KEY}}" \
+        -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução ${{ github.event.inputs.solution_name }}] exportada."}'
+        
     - name: unpack-solution action
       uses: microsoft/powerplatform-actions/unpack-solution@v0
       with:
@@ -71,6 +82,13 @@ jobs:
         solution-type: 'Unmanaged'
         overwrite-files: true
 
+    - name: Log End Unzip Solution
+      run: |
+        curl -X POST ${{env.WORKFLOW_URL}} \
+        -H "Content-Type: application/json" \
+        -H "RunKey: ${{env.RUN_KEY}}" \
+        -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução ${{ github.event.inputs.solution_name }}] descompactada."}'
+
     - name: branch-solution, prepare it for a PullRequest
       uses: microsoft/powerplatform-actions/branch-solution@v0
       with:
@@ -78,3 +96,10 @@ jobs:
         solution-target-folder: ${{ github.event.inputs.solution_target_folder}}/${{ github.event.inputs.solution_name }}
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         allow-empty-commit: true
+
+    - name: Log End Prepare PullRequest
+      run: |
+        curl -X POST ${{env.WORKFLOW_URL}} \
+        -H "Content-Type: application/json" \
+        -H "RunKey: ${{env.RUN_KEY}}" \
+        -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução ${{ github.event.inputs.solution_name }}] preparada para Pull Request."}'

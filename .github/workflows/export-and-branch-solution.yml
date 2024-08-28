@@ -71,7 +71,7 @@ jobs:
         curl -X POST "${{env.WORKFLOW_URL}}" \
         -H "Content-Type: application/json" \
         -H "RunKey: ${{env.RUN_KEY}}" \
-        -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução ${{ github.event.inputs.solution_name }}] exportada."}'
+        -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução <b>${{ github.event.inputs.solution_name }}</b> exportada."}'
         
     - name: unpack-solution action
       uses: microsoft/powerplatform-actions/unpack-solution@v0
@@ -86,7 +86,7 @@ jobs:
         curl -X POST "${{env.WORKFLOW_URL}}" \
         -H "Content-Type: application/json" \
         -H "RunKey: ${{env.RUN_KEY}}" \
-        -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução ${{ github.event.inputs.solution_name }}] descompactada."}'
+        -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução <b>${{ github.event.inputs.solution_name }}</b> descompactada."}'
 
     - name: branch-solution, prepare it for a PullRequest
       uses: microsoft/powerplatform-actions/branch-solution@v0
@@ -101,4 +101,4 @@ jobs:
         curl -X POST "${{env.WORKFLOW_URL}}" \
         -H "Content-Type: application/json" \
         -H "RunKey: ${{env.RUN_KEY}}" \
-        -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução ${{ github.event.inputs.solution_name }}] preparada para Pull Request."}'
+        -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução <b>${{ github.event.inputs.solution_name }}</b> preparada para Pull Request."}'

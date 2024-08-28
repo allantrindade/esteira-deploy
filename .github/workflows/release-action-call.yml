@@ -4,7 +4,12 @@ name: Release action
 
 on:
   release:
-      types: [created]        
+      types: [created] 
+      inputs:
+          solution_name:
+          description: 'The name of the solution to be released'
+          required: true
+          default: ALMLab
 permissions:
   contents: write
 jobs:
@@ -12,7 +17,7 @@ jobs:
     uses: ./.github/workflows/release-solution-to-prod-with-inputs.yml
     with:
       #You can specify the solution name here
-      solution_name: ALMLab
+      solution_name: ${{ inputs.solution_name }}
       #Update your values here
       BUILD_ENVIRONMENT_URL: 'https://ava-powerplatform-deploy.crm.dynamics.com'
       PRODUCTION_ENVIRONMENT_URL: 'https://ava-powerplatform-prod.crm.dynamics.com'

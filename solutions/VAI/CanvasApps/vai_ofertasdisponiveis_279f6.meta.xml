@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>vai_ofertasdisponiveis_279f6</Name>
+  <AppVersion>2024-07-30T15:03:36Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.24072.14.0</CreatedByClientVersion>
+  <MinClientVersion>3.24072.14.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"640","primaryDeviceHeight":"640","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","showStatusBar":"false","publisherVersion":"3.24072.14","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(251,101,60,1)</BackgroundColor>
+  <DisplayName>OfertasDisponiveis</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <AppComponents>[{"appComponentName":"961d5c50dcad4c7088b09a90df1042dd","displayName":"Component1","appName":"9946bac6-0383-4a1c-a962-0fcf1ee08da2","appVersion":"2024-07-30T15:03:36Z","appComponentLibraryLogicalName":"vai_ofertasdisponiveis_279f6","appDisplayName":"OfertasDisponiveis","environmentName":"e8372758-12f6-ef9d-b518-0e59db049418","owner":{"id":"e151b032-adc9-4314-b214-7766504e5a44","displayName":"Allan Trindade","email":"Allan@ywchc.onmicrosoft.com","type":"User","tenantId":"d7f2ff81-6d1b-4b31-a5f4-806476fd7131","userPrincipalName":"Allan@ywchc.onmicrosoft.com"},"allowCustomization":true,"createdOn":"2024-07-30T15:03:31.676Z","lastModifiedOn":"2024-07-30T15:03:31.676Z","connectionReferences":{},"databaseReferences":{}}]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>0</CanConsumeAppPass>
+  <CanvasAppType>1</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/vai_ofertasdisponiveis_279f6_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/vai_ofertasdisponiveis_279f6_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/vai_ofertasdisponiveis_279f6_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>

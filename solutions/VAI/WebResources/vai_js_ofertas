@@ -1,0 +1,62 @@
+if (typeof (VAI) === "undefined") { VAI = {}; }
+if (typeof (VAI.Offers) === "undefined") { VAI.Offers = {}; }
+
+
+VAI.Offers = {
+	openModal:(selectedItemId) => {
+		var data = "";	
+		// Usar Xrm.WebApi.retrieveRecord para obter detalhes do registro
+        Xrm.WebApi.retrieveRecord("vai_offers", selectedItemId, "?$select=vai_name,vai_argumento").then(
+            function success(result) {
+				// Processar e exibir os detalhes do registro
+				var pageInput = {
+					pageType: "webresource",
+					webresourceName: "vai_ofertas",
+					data: JSON.stringify(result, null, 2)
+				};
+				
+				var navigationOptions = {
+					target: 2,
+					width: 400,
+					height: 300,
+					position: 1
+				};
+					
+				Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
+					function success() {
+					 // Handle dialog closed
+						   console.log("Inside Success");
+					},
+					function error() {
+						  Xrm.Navigation.openAlertDialog({ text: error.message });
+					}
+				);
+			},
+            function error() {
+				Xrm.Navigation.openAlertDialog({ text: error.message });
+			}
+        );	
+	},
+
+	openLUR:() => {
+		var pageInput = {
+			pageType: "entitylist",
+			entityName: "wd_consulta_online_ofertas"
+		};
+		var navigationOptions = {
+			target: 2,
+			height: {value: 80, unit:"%"},
+			width: {value: 70, unit:"%"},
+			position: 1
+		};
+		Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
+			function success() {
+					// Run code on success
+			},
+			function error() {
+					// Handle errors
+			}
+		);
+
+	}
+}

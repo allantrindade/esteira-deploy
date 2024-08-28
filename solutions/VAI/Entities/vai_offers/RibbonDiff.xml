@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <CustomAction Id="vai.Mscrm.SubGrid.vai_offers.VerMais.CustomAction" Location="Mscrm.SubGrid.vai_offers.MainTab.Management.Controls._children" Sequence="5">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:Mscrm.SubGrid.vai_offers.VerMais.Alt" Command="Mscrm.VerMaisCommand" Id="Mscrm.SubGrid.vai_offers.VerMais" Image32by32="/_imgs/ribbon/newrecord32.png" Image16by16="/_imgs/ribbon/New_16.png" LabelText="$LocLabels:Mscrm.SubGrid.vai_offers.VerMais.LabelText" Sequence="5" TemplateAlias="o1" ToolTipTitle="$LocLabels:Mscrm.SubGrid.vai_offers.VerMais.ToolTipTitle" ToolTipDescription="$LocLabels:Mscrm.SubGrid.vai_offers.VerMais.ToolTipDescription" ModernImage="New" />
+      </CommandUIDefinition>
+    </CustomAction>
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions>
+    <CommandDefinition Id="Mscrm.VerMaisCommand">
+      <EnableRules>
+        <EnableRule Id="Mscrm.VerMaisEnableRule" />
+      </EnableRules>
+      <DisplayRules />
+      <Actions>
+        <JavaScriptFunction FunctionName="VAI.Offers.openModal" Library="$webresource:vai_js_ofertas">
+          <CrmParameter Value="FirstSelectedItemId" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+  </CommandDefinitions>
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules />
+    <EnableRules>
+      <EnableRule Id="Mscrm.VerMaisEnableRule">
+        <SelectionCountRule AppliesTo="SelectedEntity" Minimum="1" Maximum="1" />
+      </EnableRule>
+    </EnableRules>
+  </RuleDefinitions>
+  <LocLabels>
+    <LocLabel Id="Mscrm.SubGrid.vai_offers.VerMais.Alt">
+      <Titles>
+        <Title description="Ver Mais" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.vai_offers.VerMais.LabelText">
+      <Titles>
+        <Title description="Ver Mais" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.vai_offers.VerMais.ToolTipDescription">
+      <Titles>
+        <Title description="Ver Mais" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.vai_offers.VerMais.ToolTipTitle">
+      <Titles>
+        <Title description="Ver Mais" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+  </LocLabels>
+</RibbonDiffXml>

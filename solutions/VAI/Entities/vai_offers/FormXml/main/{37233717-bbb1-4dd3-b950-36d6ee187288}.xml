@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{37233717-bbb1-4dd3-b950-36d6ee187288}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{ff16672c-5bfe-4a4b-9987-cc5cbf8be8e7}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{cc32b45b-d56f-42c9-aa75-5577c3c60ec6}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f6fc1ef5-2196-4a7c-b18c-0f004461ccf5}">
+                        <labels>
+                          <label description="Offer ID" languagecode="1033" />
+                        </labels>
+                        <control id="vai_offerid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="vai_offerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c6d48b71-92c2-483a-bbb0-78e9293a900c}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="vai_name" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="vai_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c77308e5-b132-4f79-917f-c5c7addb5501}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Argumento" languagecode="1033" />
+                        </labels>
+                        <control id="vai_argumento" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="vai_argumento" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{65015d85-5cdf-462a-8d14-20335d6c1f84}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Contact" languagecode="1033" />
+                        </labels>
+                        <control id="vai_contact" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="vai_contact" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{dbb74e63-0f6a-4997-bc61-7e5519a4bb5b}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{5f8aa327-2962-45a3-b476-794ab6577a8f}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1e4014b3-8778-457f-a0a4-6ac9f6cc9e5e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0940a456-5896-4a01-b0d2-aa1d9ef614cb}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{98330b11-f5e1-4b4f-b9a4-cf52e838dc3d}" colspan="1" rowspan="1" locklevel="0">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="true" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{d4f4ffe2-705c-4a03-8b0e-4dbc169ee321}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{44031a25-1e66-4a49-8a8c-6f343298d7b6}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{e680ffa7-e551-4b7f-8486-06512b09ce8d}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{76075804-c248-4a6e-b102-9411f281a625}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

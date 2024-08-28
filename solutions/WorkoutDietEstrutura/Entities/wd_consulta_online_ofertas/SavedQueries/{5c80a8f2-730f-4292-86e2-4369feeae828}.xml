@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{5c80a8f2-730f-4292-86e2-4369feeae828}</savedqueryid>
+    <layoutxml>
+      <grid name="wd_consulta_online_ofertases" jump="wd_nome" select="1" icon="1" preview="1">
+        <row name="wd_consulta_online_ofertas" id="wd_consulta_online_ofertasid">
+          <cell name="wd_nome" width="300" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="wd_consulta_online_ofertas">
+          <attribute name="wd_consulta_online_ofertasid" />
+          <attribute name="wd_nome" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Consuta Online Ofertas Associated View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

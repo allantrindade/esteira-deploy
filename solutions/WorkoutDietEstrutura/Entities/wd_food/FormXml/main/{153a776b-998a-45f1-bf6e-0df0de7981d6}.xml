@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{153a776b-998a-45f1-bf6e-0df0de7981d6}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{f0f90da4-0de1-49cb-9b5a-4257563e93a8}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{9dfbdefe-eb02-44be-9829-8d56ac4582dd}" columns="111">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{8d1862e2-9757-4667-86d9-9f4cb99ea50b}" colspan="2" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="wd_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="wd_name" uniqueid="{45033e63-05a9-3445-d1d9-18c057721e0b}" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b29d7f30-4ebc-4fce-9628-cec671767559}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Calories" languagecode="1033" />
+                        </labels>
+                        <control id="wd_calories" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="wd_calories" disabled="false" />
+                      </cell>
+                      <cell id="{5bcd7b37-d5e1-4741-b261-c08780c5e995}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Carbohydrates" languagecode="1033" />
+                        </labels>
+                        <control id="wd_carbohydrates" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="wd_carbohydrates" disabled="false" />
+                      </cell>
+                      <cell id="{d856cbc2-875d-8bbc-448a-3838d49aaa4c}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Proteins" languagecode="1033" />
+                        </labels>
+                        <control id="wd_proteins" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="wd_proteins" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0e1c5b32-cca3-20de-ca03-d7b4a21e5e71}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Fats" languagecode="1033" />
+                        </labels>
+                        <control id="wd_fats" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="wd_fats" disabled="false" />
+                      </cell>
+                      <cell id="{b0628385-460b-1cee-6742-8b8a688be2c9}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Fibers" languagecode="1033" />
+                        </labels>
+                        <control id="wd_fibers" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="wd_fibers" disabled="false" />
+                      </cell>
+                      <cell id="{03bb392a-7dae-114a-b298-bbba37b592b5}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Sodium" languagecode="1033" />
+                        </labels>
+                        <control id="wd_sodium" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="wd_sodium" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{82be5a72-e20c-4aa0-bd63-e1f606de083d}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{fd58aefc-2ade-4106-b679-3dcce21e6dd2}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{62b5cab6-dbba-4c27-b9ae-c7e14ca10203}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{4fc8a288-fb72-47ec-b605-5cca7052d867}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{650acaf9-4cd1-4274-925d-2066f305d278}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="true" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{12f8aec8-5456-4040-9c7a-67c6ab1cf903}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{e1bf2b08-4dd2-477c-8816-67b741778547}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{3f75a355-b0ff-42cb-b5e9-10c316c4439a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{566f3f52-89cb-4c76-9b9e-848dccd7e702}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions />
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

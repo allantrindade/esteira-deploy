@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{71cac9ae-7a52-485f-825b-eb31264f09ff}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{697a0878-67e2-49ff-bd9d-01984d64da45}" IsUserDefined="1" name="tab_user">
+          <labels>
+            <label description="Usuário" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{2c01a7a8-52d2-4af1-b92d-5d61f34d123d}" name="tab_user_section_personal_data">
+                  <labels>
+                    <label description="Dados Pessoais" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{dd9b7334-f272-46ae-919c-fd64948ee99c}">
+                        <labels>
+                          <label description="Nome" languagecode="1033" />
+                        </labels>
+                        <control id="wd_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="wd_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{29be7b77-ce92-4e5c-8bcc-40c606eb3ce7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="E-mail" languagecode="1033" />
+                        </labels>
+                        <control id="wd_email" classid="{ADA2203E-B4CD-49BE-9DDF-234642B43B52}" datafieldname="wd_email" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{64555fad-0a0d-40a7-bfb4-32421d327b76}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Data de Nascimento" languagecode="1033" />
+                        </labels>
+                        <control id="wd_date_of_birth" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="wd_date_of_birth" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{99b302a2-3308-4749-a4a7-672df20df30f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Altura (m)" languagecode="1033" />
+                        </labels>
+                        <control id="wd_height" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="wd_height" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d287a48b-5d13-4ef8-a73e-ae4d45ff2687}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Peso (kg)" languagecode="1033" />
+                        </labels>
+                        <control id="wd_weight" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="wd_weight" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_diet" id="7adcdecd-62bd-4be3-a8c9-41202fdfca73" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Dieta" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_diet_section_my_diets" id="7a274729-9b3c-47cd-92d3-1a80c3c975ca" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Minhas Dietas" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{a1749ef2-1c6f-40af-8769-154448f601b3}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1722521162286" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>wd_diet</TargetEntityType>
+                            <ViewId>{D0481F60-710B-4AE0-AB6D-82CFB0646BC6}</ViewId>
+                            <ViewIds>{D0481F60-710B-4AE0-AB6D-82CFB0646BC6}</ViewIds>
+                            <RelationshipName>wd_diet_user_wd_user</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_3" id="90716b9f-3e55-4385-ae2f-b6df3994ab06" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Ofertas" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_3_section_1" id="b0d81469-de65-4aee-af03-eacf0cab5f0b" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{163e7831-544c-4baf-b740-027cba71f482}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1724344231341" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_2" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{74690ca5-796e-4f03-bd74-c82ac6d0293c}">
+                          <parameters>
+                            <RecordsPerPage>5</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>wd_consulta_online_ofertas</TargetEntityType>
+                            <ViewId>{AD0939E7-FC5C-4E72-AF35-630993D6DF46}</ViewId>
+                            <ViewIds>{AD0939E7-FC5C-4E72-AF35-630993D6DF46}</ViewIds>
+                            <RelationshipName>wd_consulta_online_ofertas_usuario_wd_user</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{97c3fbfb-1732-43dd-947f-c5bbb56e3fd2}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{6c169c23-9b6d-4ee6-8de3-0b2be4cd2ea0}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c1d3f0d8-582c-42f7-9141-eb5d46d6dada}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{3a04589e-3187-4b33-bb78-e4d0bab83a5c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0ed07f1f-4f39-495c-a827-aef9760659f5}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="true" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{f707eabe-734c-4096-a989-a475213b63f4}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{f6c2baa7-1ad0-40d0-83c8-bbcc5e1d7844}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{cbf22753-1038-404f-be29-466318781090}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{cecaa6d7-d698-4baa-9ac0-d7cb87757e9d}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+      <controlDescriptions>
+        <controlDescription forControl="{74690ca5-796e-4f03-bd74-c82ac6d0293c}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters />
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.Grid.PCFGridControl">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{AD0939E7-FC5C-4E72-AF35-630993D6DF46}</ViewId>
+                <TargetEntityType>wd_consulta_online_ofertas</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>wd_consulta_online_ofertas_usuario_wd_user</RelationshipName>
+                <FilteredViewIds>{AD0939E7-FC5C-4E72-AF35-630993D6DF46}</FilteredViewIds>
+              </data-set>
+              <ColumnResizing type="Enum" static="true">Enable</ColumnResizing>
+              <ColumnMoving type="Enum" static="true">Disable</ColumnMoving>
+              <ColumnPinning type="Enum" static="true">Disable</ColumnPinning>
+              <RowStyle type="Enum" static="true">Flat</RowStyle>
+              <RowSelection type="Enum" static="true">Multiple</RowSelection>
+              <SelectionColumn type="Enum" static="true">Enable</SelectionColumn>
+              <JumpBar type="Enum" static="true">Disable</JumpBar>
+              <Footer type="Enum" static="true">Enable</Footer>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <EnableFiltering type="Enum" static="true">Disable</EnableFiltering>
+              <EnableRangeSelection type="Enum" static="true">no</EnableRangeSelection>
+              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
+              <RowHeight type="Whole.None" static="true">42</RowHeight>
+              <RowHeightMobile type="Whole.None" static="true">72</RowHeightMobile>
+              <HeaderHeight type="Whole.None" static="true">42</HeaderHeight>
+              <GridInnerLeftPadding type="Whole.None" static="true">32</GridInnerLeftPadding>
+              <GridInnerRightPadding type="Whole.None" static="true">32</GridInnerRightPadding>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.Grid.PCFGridControl">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{AD0939E7-FC5C-4E72-AF35-630993D6DF46}</ViewId>
+                <TargetEntityType>wd_consulta_online_ofertas</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>wd_consulta_online_ofertas_usuario_wd_user</RelationshipName>
+                <FilteredViewIds>{AD0939E7-FC5C-4E72-AF35-630993D6DF46}</FilteredViewIds>
+              </data-set>
+              <ColumnResizing type="Enum" static="true">Enable</ColumnResizing>
+              <ColumnMoving type="Enum" static="true">Disable</ColumnMoving>
+              <ColumnPinning type="Enum" static="true">Disable</ColumnPinning>
+              <RowStyle type="Enum" static="true">Flat</RowStyle>
+              <RowSelection type="Enum" static="true">Multiple</RowSelection>
+              <SelectionColumn type="Enum" static="true">Enable</SelectionColumn>
+              <JumpBar type="Enum" static="true">Disable</JumpBar>
+              <Footer type="Enum" static="true">Enable</Footer>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <EnableFiltering type="Enum" static="true">Disable</EnableFiltering>
+              <EnableRangeSelection type="Enum" static="true">no</EnableRangeSelection>
+              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
+              <RowHeight type="Whole.None" static="true">42</RowHeight>
+              <RowHeightMobile type="Whole.None" static="true">72</RowHeightMobile>
+              <HeaderHeight type="Whole.None" static="true">42</HeaderHeight>
+              <GridInnerLeftPadding type="Whole.None" static="true">32</GridInnerLeftPadding>
+              <GridInnerRightPadding type="Whole.None" static="true">32</GridInnerRightPadding>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.Grid.PCFGridControl">
+            <parameters>
+              <data-set name="Items">
+                <ViewId>{AD0939E7-FC5C-4E72-AF35-630993D6DF46}</ViewId>
+                <TargetEntityType>wd_consulta_online_ofertas</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>wd_consulta_online_ofertas_usuario_wd_user</RelationshipName>
+                <FilteredViewIds>{AD0939E7-FC5C-4E72-AF35-630993D6DF46}</FilteredViewIds>
+              </data-set>
+              <ColumnResizing type="Enum" static="true">Enable</ColumnResizing>
+              <ColumnMoving type="Enum" static="true">Disable</ColumnMoving>
+              <ColumnPinning type="Enum" static="true">Disable</ColumnPinning>
+              <RowStyle type="Enum" static="true">Flat</RowStyle>
+              <RowSelection type="Enum" static="true">Multiple</RowSelection>
+              <SelectionColumn type="Enum" static="true">Enable</SelectionColumn>
+              <JumpBar type="Enum" static="true">Disable</JumpBar>
+              <Footer type="Enum" static="true">Enable</Footer>
+              <ReflowBehavior type="Enum" static="true">GridOnly</ReflowBehavior>
+              <EnableFiltering type="Enum" static="true">Disable</EnableFiltering>
+              <EnableRangeSelection type="Enum" static="true">no</EnableRangeSelection>
+              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
+              <RowHeight type="Whole.None" static="true">42</RowHeight>
+              <RowHeightMobile type="Whole.None" static="true">72</RowHeightMobile>
+              <HeaderHeight type="Whole.None" static="true">42</HeaderHeight>
+              <GridInnerLeftPadding type="Whole.None" static="true">32</GridInnerLeftPadding>
+              <GridInnerRightPadding type="Whole.None" static="true">32</GridInnerRightPadding>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

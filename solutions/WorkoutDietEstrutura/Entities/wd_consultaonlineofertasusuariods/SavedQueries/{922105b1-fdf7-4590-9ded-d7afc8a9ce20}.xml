@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{922105b1-fdf7-4590-9ded-d7afc8a9ce20}</savedqueryid>
+    <layoutxml>
+      <grid name="wd_consultaonlineofertasusuariodses" jump="wd_name" select="1" icon="1" preview="0">
+        <row name="wd_consultaonlineofertasusuariods" id="wd_consultaonlineofertasusuariodsid">
+          <cell name="wd_name" width="300" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>64</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="wd_consultaonlineofertasusuariods">
+          <attribute name="wd_consultaonlineofertasusuariodsid" />
+          <attribute name="wd_name" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Consulta Online Ofertas Usuario DS Lookup View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

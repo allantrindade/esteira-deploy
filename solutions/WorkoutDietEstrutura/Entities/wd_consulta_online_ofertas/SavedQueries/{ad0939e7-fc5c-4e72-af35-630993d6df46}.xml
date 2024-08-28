@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{ad0939e7-fc5c-4e72-af35-630993d6df46}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="wd_nome" select="1" icon="1" preview="1">
+        <row name="result" id="wd_consulta_online_ofertasid">
+          <cell name="wd_nome" width="300" />
+          <cell name="wd_argumento" width="179" />
+          <cell name="wd_usuario" width="165" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="wd_consulta_online_ofertas">
+          <attribute name="wd_consulta_online_ofertasid" />
+          <attribute name="wd_nome" />
+          <attribute name="wd_argumento" />
+          <attribute name="wd_usuario" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Consuta Online Ofertas" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

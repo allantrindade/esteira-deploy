@@ -1,0 +1,46 @@
+<appaction uniquename="wd__ExibirLURContrato!10f66bcfa3384b8bb702f96d9ca11243!wd_WorkoutDiet!wd_consulta_online_ofertas!2">
+  <appmoduleid>
+    <uniquename>wd_WorkoutDiet</uniquename>
+  </appmoduleid>
+  <buttonaccessibilitytext default="Exibir LUR Contratos">
+    <label description="Exibir LUR Contratos" languagecode="1033" />
+  </buttonaccessibilitytext>
+  <buttonlabeltext default="Exibir LUR Contratos">
+    <label description="Exibir LUR Contratos" languagecode="1033" />
+  </buttonlabeltext>
+  <buttontooltipdescription default="Exibir LUR Contratos">
+    <label description="Exibir LUR Contratos" languagecode="1033" />
+  </buttontooltipdescription>
+  <buttontooltiptitle default="Exibir LUR Contratos">
+    <label description="Exibir LUR Contratos" languagecode="1033" />
+  </buttontooltiptitle>
+  <context>1</context>
+  <contextentity>
+    <logicalname>wd_consulta_online_ofertas</logicalname>
+  </contextentity>
+  <contextvalue>wd_consulta_online_ofertas</contextvalue>
+  <fonticon>BarChartVerticalMirrored</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>2</location>
+  <name>ExibirLURContrato!10f66bcfa3384b8bb702f96d9ca11243</name>
+  <onclickeventjavascriptfunctionname>VAI.Offers.openLUR</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>ebccacf3-894e-ef11-a317-0022481d5e68</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100001.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilityformulacomponentlibraryid>
+    <name>wd_workoutdietdefaultcommandlibrary_24d2a</name>
+  </visibilityformulacomponentlibraryid>
+  <visibilityformulacomponentname>478ea7ceecdf4bcfbb5e69b231092433</visibilityformulacomponentname>
+  <visibilityformulafunctionname>Visible</visibilityformulafunctionname>
+  <visibilitytype>1</visibilitytype>
+</appaction>

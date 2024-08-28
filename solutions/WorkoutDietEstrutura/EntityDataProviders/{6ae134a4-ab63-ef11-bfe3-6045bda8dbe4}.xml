@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDataProvider xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityDataProviderId>{6ae134a4-ab63-ef11-bfe3-6045bda8dbe4}</EntityDataProviderId>
+  <Name>Consulta Online Ofertas Usuario DP</Name>
+  <DataSourceLogicalName>wd_consultaonlineofertasusuariods</DataSourceLogicalName>
+  <IsCustomizable>1</IsCustomizable>
+  <RetrievePluginTypeId>c1919979-0021-4f11-a587-a8f904bdfdf9</RetrievePluginTypeId>
+  <RetrieveMultiplePluginTypeId>6e09a335-6d7d-46fb-830c-500ae189e1d3</RetrieveMultiplePluginTypeId>
+  <CreatePluginTypeId>c1919979-0021-4f11-a587-a8f904bdfdf9</CreatePluginTypeId>
+  <UpdatePluginTypeId>c1919979-0021-4f11-a587-a8f904bdfdf9</UpdatePluginTypeId>
+  <DeletePluginTypeId>c1919979-0021-4f11-a587-a8f904bdfdf9</DeletePluginTypeId>
+</EntityDataProvider>

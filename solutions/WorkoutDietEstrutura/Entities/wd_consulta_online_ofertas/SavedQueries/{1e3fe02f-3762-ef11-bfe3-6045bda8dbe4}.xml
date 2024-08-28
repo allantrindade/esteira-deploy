@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{1e3fe02f-3762-ef11-bfe3-6045bda8dbe4}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="wd_nome" select="1" icon="1" preview="1">
+        <row name="result" id="wd_consulta_online_ofertasid">
+          <cell name="wd_nome" width="200" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="wd_consulta_online_ofertas">
+          <attribute name="wd_nome" />
+          <attribute name="wd_consulta_online_ofertasid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="teste" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

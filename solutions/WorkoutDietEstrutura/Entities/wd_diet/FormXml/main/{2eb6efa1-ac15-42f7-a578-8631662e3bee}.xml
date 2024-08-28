@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{2eb6efa1-ac15-42f7-a578-8631662e3bee}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{1148db04-daff-4258-80a3-bb7bb03eab80}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{c2842d5e-c5bc-48fe-9bf5-9bf79a263282}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{50e9a4d1-f112-43a6-a3c8-b3cc4ea8ab00}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="wd_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="wd_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e7a07492-0221-4f15-836c-a37d6dddb48b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="User" languagecode="1033" />
+                        </labels>
+                        <control id="wd_user" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="wd_user" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="5cbbbc26-7aa0-4739-8c57-690b30820af6" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Refeições" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{f11525e7-449e-40ab-ab3f-83cf93c7fc7d}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="New SG control 1722521600688" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{a5dba695-d310-4f38-a82b-25a8b08d164f}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>wd_meal_type</TargetEntityType>
+                            <ViewId>{108E8CC9-79E0-4366-817F-A8924FD1A493}</ViewId>
+                            <ViewIds>{108E8CC9-79E0-4366-817F-A8924FD1A493}</ViewIds>
+                            <RelationshipName>wd_diet_wd_meal_type_wd_meal_type</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{dd1d0478-da4f-447c-a69f-b70ce25f1fd1}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{bc3a5d23-4175-4d54-bcce-0f14a5f01d47}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{de1a039f-20b3-4594-bd7b-00c09af795fa}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{61e29387-a25e-420a-8d0a-cde407c56402}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{59fb0f66-59f0-4d88-8617-6f58531943ab}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Date" languagecode="1033" />
+              </labels>
+              <control id="header_wd_date" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="wd_date" disabled="false" />
+            </cell>
+            <cell id="{4793ed6c-d9c9-4b8f-8098-ab8b4428d0c6}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="Total Calories" languagecode="1033" />
+              </labels>
+              <control id="header_wd_totalcalories" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="wd_totalcalories" disabled="true" />
+            </cell>
+            <cell id="{03bcb741-2f53-491f-82ee-1aa02b9c9637}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="true" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{617c596e-ff28-4684-8ef6-1d7c46ccf4b7}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{5cc07c43-39d4-42b2-9530-60f1032f760e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{9538358a-852f-410a-ac3d-5254206dfa72}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{4fa9be74-43e5-4f6e-9ad1-a7fcbd6fa405}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+      <controlDescriptions>
+        <controlDescription forControl="{a5dba695-d310-4f38-a82b-25a8b08d164f}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters>
+              <RecordsPerPage>4</RecordsPerPage>
+              <AutoExpand>Fixed</AutoExpand>
+              <EnableQuickFind>false</EnableQuickFind>
+              <EnableViewPicker>false</EnableViewPicker>
+              <EnableChartPicker>true</EnableChartPicker>
+              <ChartGridMode>All</ChartGridMode>
+              <TargetEntityType>wd_meal_type</TargetEntityType>
+              <ViewId>{108E8CC9-79E0-4366-817F-A8924FD1A493}</ViewId>
+              <ViewIds>{108E8CC9-79E0-4366-817F-A8924FD1A493}</ViewIds>
+              <RelationshipName>wd_diet_wd_meal_type_wd_meal_type</RelationshipName>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="wd_SampleNamespace.ModelDrivenGrid">
+            <parameters>
+              <data-set name="records">
+                <ViewId>{108e8cc9-79e0-4366-817f-a8924fd1a493}</ViewId>
+                <TargetEntityType>wd_meal_type</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>wd_diet_wd_meal_type_wd_meal_type</RelationshipName>
+                <FilteredViewIds>{108E8CC9-79E0-4366-817F-A8924FD1A493}</FilteredViewIds>
+                <HighlightIndicator>statuscode</HighlightIndicator>
+              </data-set>
+              <HighlightValue type="SingleLine.Text" static="true">2</HighlightValue>
+              <HighlightColor type="SingleLine.Text" static="true">#FDE7E9</HighlightColor>
+              <SubGridHeight type="Whole.None" static="true">240</SubGridHeight>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="wd_SampleNamespace.ModelDrivenGrid">
+            <parameters>
+              <data-set name="records">
+                <ViewId>{108e8cc9-79e0-4366-817f-a8924fd1a493}</ViewId>
+                <TargetEntityType>wd_meal_type</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>wd_diet_wd_meal_type_wd_meal_type</RelationshipName>
+                <FilteredViewIds>{108E8CC9-79E0-4366-817F-A8924FD1A493}</FilteredViewIds>
+                <HighlightIndicator>statuscode</HighlightIndicator>
+              </data-set>
+              <HighlightValue type="SingleLine.Text" static="true">2</HighlightValue>
+              <HighlightColor type="SingleLine.Text" static="true">#FDE7E9</HighlightColor>
+              <SubGridHeight type="Whole.None" static="true">240</SubGridHeight>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="wd_SampleNamespace.ModelDrivenGrid">
+            <parameters>
+              <data-set name="records">
+                <ViewId>{108e8cc9-79e0-4366-817f-a8924fd1a493}</ViewId>
+                <TargetEntityType>wd_meal_type</TargetEntityType>
+                <IsUserView>false</IsUserView>
+                <EnableViewPicker>false</EnableViewPicker>
+                <RelationshipName>wd_diet_wd_meal_type_wd_meal_type</RelationshipName>
+                <FilteredViewIds>{108E8CC9-79E0-4366-817F-A8924FD1A493}</FilteredViewIds>
+                <HighlightIndicator>statuscode</HighlightIndicator>
+              </data-set>
+              <HighlightValue type="SingleLine.Text" static="true">2</HighlightValue>
+              <HighlightColor type="SingleLine.Text" static="true">#FDE7E9</HighlightColor>
+              <SubGridHeight type="Whole.None" static="true">240</SubGridHeight>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

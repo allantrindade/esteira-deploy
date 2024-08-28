@@ -5,12 +5,13 @@ name: export-and-branch-solution
 on:
   workflow_dispatch:
     inputs:
-      # Change this value
       solution_name:
         description: 'name of the solution to worked on from Power Platform'
         required: true
         default: ALMLab
-       #Do Not change these values
+      solution-version:
+        description: 'version of solution to export'
+        required: false        
       solution_exported_folder:
         description: 'folder name for staging the exported solution *do not change*'
         required: true
@@ -59,6 +60,7 @@ jobs:
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{env.TENANT_ID}}
         solution-name: ${{ github.event.inputs.solution_name }}
+        solution-version: ${{ github.event.inputs.solution_version }}
         solution-output-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
 
     - name: unpack-solution action

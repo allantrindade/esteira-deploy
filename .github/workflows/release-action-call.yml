@@ -4,12 +4,12 @@ name: Release action
 
 on:
   release:
-      types: [created] 
-      inputs:
-          solution_name:
-          description: 'The name of the solution to be released'
-          required: true
-          default: ALMLab
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      solution_name:
+        description: 'The name of the solution to be released'
+        required: true
 permissions:
   contents: write
 jobs:

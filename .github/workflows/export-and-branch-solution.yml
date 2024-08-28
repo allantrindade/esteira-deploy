@@ -51,7 +51,7 @@ jobs:
 
     - name: Log Start Export Solution
       run: |
-        curl -X POST ${{env.WORKFLOW_URL}} \
+        curl -X POST "${{env.WORKFLOW_URL}}" \
         -H "Content-Type: application/json" \
         -H "RunKey: ${{env.RUN_KEY}}" \
         -d '{"request": "${{ github.event.inputs.request_id }}","log": "Iniciando exportação da solução: ${{ github.event.inputs.solution_name }}..."}'

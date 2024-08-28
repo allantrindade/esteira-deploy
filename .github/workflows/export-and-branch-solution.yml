@@ -25,7 +25,7 @@ env:
   ENVIRONMENT_URL: 'https://ava-powerplatform-dev.crm.dynamics.com'
   CLIENT_ID: '03f7f8a4-7b34-4f76-8c12-90a1565ca4fb'
   TENANT_ID: 'd7f2ff81-6d1b-4b31-a5f4-806476fd7131'
-  WORKFLOW_URL: 'https://prod-62.westus.logic.azure.com:443/workflows/b228d7d3e3784e2abed7359a8902b901/triggers/manual/paths/invoke?api-version=2016-06-01'
+  WORKFLOW_URL: 'https://prod-62.westus.logic.azure.com:443/workflows/b228d7d3e3784e2abed7359a8902b901/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Kaoklk6L_8Xtxbq8kPVK639yDYCKWoI6cy0dUGjOPsE'
   RUN_KEY: 'FSgWPsAEBDP6epQZ'
 permissions:
   contents: write

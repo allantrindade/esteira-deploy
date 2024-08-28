@@ -68,7 +68,7 @@ jobs:
 
     - name: Log End Export Solution
       run: |
-        curl -X POST ${{env.WORKFLOW_URL}} \
+        curl -X POST "${{env.WORKFLOW_URL}}" \
         -H "Content-Type: application/json" \
         -H "RunKey: ${{env.RUN_KEY}}" \
         -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução ${{ github.event.inputs.solution_name }}] exportada."}'
@@ -83,7 +83,7 @@ jobs:
 
     - name: Log End Unzip Solution
       run: |
-        curl -X POST ${{env.WORKFLOW_URL}} \
+        curl -X POST "${{env.WORKFLOW_URL}}" \
         -H "Content-Type: application/json" \
         -H "RunKey: ${{env.RUN_KEY}}" \
         -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução ${{ github.event.inputs.solution_name }}] descompactada."}'
@@ -98,7 +98,7 @@ jobs:
 
     - name: Log End Prepare PullRequest
       run: |
-        curl -X POST ${{env.WORKFLOW_URL}} \
+        curl -X POST "${{env.WORKFLOW_URL}}" \
         -H "Content-Type: application/json" \
         -H "RunKey: ${{env.RUN_KEY}}" \
         -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução ${{ github.event.inputs.solution_name }}] preparada para Pull Request."}'

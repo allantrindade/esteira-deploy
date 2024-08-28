@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="adx_invitation_invitecontacts" />
+  <EntityRelationship Name="adx_invitation_redeemedcontacts" />
+  <EntityRelationship Name="business_unit_vai_offers" />
+  <EntityRelationship Name="lk_vai_offers_createdby" />
+  <EntityRelationship Name="lk_vai_offers_modifiedby" />
+  <EntityRelationship Name="msa_contact_managingpartner" />
+  <EntityRelationship Name="owner_vai_offers" />
+  <EntityRelationship Name="powerpagecomponent_mspp_webrole_contact" />
+  <EntityRelationship Name="team_vai_offers" />
+  <EntityRelationship Name="user_vai_offers" />
+  <EntityRelationship Name="vai_Contact_contact_vai_offers" />
+</EntityRelationships>

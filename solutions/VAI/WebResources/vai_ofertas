@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes do Registro</title>
+    <script>
+        function getQueryParam(param) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        function loadDetails() {
+            var selectedItemId = getQueryParam('data');
+            if (!selectedItemId) {
+                console.error('ID do item selecionado não fornecido.');
+                return;
+            }
+
+            document.getElementById('details').innerText = selectedItemId;
+        }
+
+        document.addEventListener("DOMContentLoaded", loadDetails);
+    </script>
+</head>
+<body>
+    <div id="modal">
+        <h2>Detalhes do Registro</h2>
+        <pre id="details"></pre>
+        <button onclick="window.close()">Fechar</button>
+    </div>
+</body>
+</html>

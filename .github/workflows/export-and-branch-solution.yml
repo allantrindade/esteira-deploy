@@ -55,7 +55,7 @@ jobs:
         curl -X POST "${{env.WORKFLOW_URL}}" \
         -H "Content-Type: application/json" \
         -H "RunKey: ${{env.RUN_KEY}}" \
-        -d '{"request": "${{ github.event.inputs.request_id }}","log": "Iniciando exportação da solução: ${{ github.event.inputs.solution_name }}..."}'
+        -d '{"request": "${{ github.event.inputs.client_playload.request_id }}","log": "Iniciando exportação da solução: ${{ github.event.inputs.client_playload.solution_name }}..."}'
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
@@ -64,21 +64,21 @@ jobs:
         app-id: ${{env.CLIENT_ID}}
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{env.TENANT_ID}}
-        solution-name: ${{ github.event.inputs.solution_name }}
-        solution-output-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
+        solution-name: ${{ github.event.inputs.client_playload.solution_name }}
+        solution-output-file: ${{ github.event.inputs.client_playload.solution_exported_folder}}/${{ github.event.inputs.client_playload.solution_name }}.zip
 
     - name: Log End Export Solution
       run: |
         curl -X POST "${{env.WORKFLOW_URL}}" \
         -H "Content-Type: application/json" \
         -H "RunKey: ${{env.RUN_KEY}}" \
-        -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução <b>${{ github.event.inputs.solution_name }}</b> exportada."}'
+        -d '{"request": "${{ github.event.inputs.client_playload.request_id }}","log": "Solução <b>${{ github.event.inputs.client_playload.solution_name }}</b> exportada."}'
         
     - name: unpack-solution action
       uses: microsoft/powerplatform-actions/unpack-solution@v0
       with:
-        solution-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
-        solution-folder: ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}
+        solution-file: ${{ github.event.inputs.client_playload.solution_exported_folder}}/${{ github.event.inputs.client_playload.solution_name }}.zip
+        solution-folder: ${{ github.event.inputs.client_playload.solution_folder}}/${{ github.event.inputs.client_playload.solution_name }}
         solution-type: 'Unmanaged'
         overwrite-files: true
 
@@ -87,13 +87,13 @@ jobs:
         curl -X POST "${{env.WORKFLOW_URL}}" \
         -H "Content-Type: application/json" \
         -H "RunKey: ${{env.RUN_KEY}}" \
-        -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução <b>${{ github.event.inputs.solution_name }}</b> descompactada."}'
+        -d '{"request": "${{ github.event.inputs.client_playload.request_id }}","log": "Solução <b>${{ github.event.inputs.client_playload.solution_name }}</b> descompactada."}'
 
     - name: branch-solution, prepare it for a PullRequest
       uses: microsoft/powerplatform-actions/branch-solution@v0
       with:
-        solution-folder: ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}
-        solution-target-folder: ${{ github.event.inputs.solution_target_folder}}/${{ github.event.inputs.solution_name }}
+        solution-folder: ${{ github.event.inputs.client_playload.solution_folder}}/${{ github.event.inputs.client_playload.solution_name }}
+        solution-target-folder: ${{ github.event.inputs.client_playload.solution_target_folder}}/${{ github.event.inputs.client_playload.solution_name }}
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         allow-empty-commit: true
 
@@ -102,4 +102,4 @@ jobs:
         curl -X POST "${{env.WORKFLOW_URL}}" \
         -H "Content-Type: application/json" \
         -H "RunKey: ${{env.RUN_KEY}}" \
-        -d '{"request": "${{ github.event.inputs.request_id }}","log": "Solução <b>${{ github.event.inputs.solution_name }}</b> preparada para Pull Request."}'
+        -d '{"request": "${{ github.event.inputs.client_playload.request_id }}","log": "Solução <b>${{ github.event.inputs.client_playload.solution_name }}</b> preparada para Pull Request."}'

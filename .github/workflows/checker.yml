@@ -1,0 +1,51 @@
+name: solution-checker
+
+on:
+  workflow_dispatch:
+    inputs:
+      request_id:
+        description: 'id of the request to worked on from Power Platform'
+        required: true
+      solution_name:
+        description: 'name of the solution to worked on from Power Platform'
+        required: true   
+      solution_exported_folder:
+        description: 'folder name for staging the exported solution *do not change*'
+        required: true
+        default: out/exported/
+      solution_folder:
+        description: 'staging the unpacked solution folder before check-in *do not change*'
+        required: true
+        default: out/solutions/
+      solution_target_folder: 
+        description: 'folder name to be created and checked in *do not change*'
+        required: true
+        default: solutions/
+env:
+  ENVIRONMENT_URL: 'https://ava-powerplatform-dev.crm.dynamics.com'
+  CLIENT_ID: '03f7f8a4-7b34-4f76-8c12-90a1565ca4fb'
+  TENANT_ID: 'd7f2ff81-6d1b-4b31-a5f4-806476fd7131'
+  
+permissions:
+  contents: write
+jobs:
+  checker-from-dev:
+    runs-on: windows-latest
+
+    env:
+      RUNNER_DEBUG: 1
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        lfs: true
+
+    - name: check-solution action
+      uses: microsoft/powerplatform-actions/check-solution@v0
+      with:
+        environment-url: ${{env.ENVIRONMENT_URL}}
+        app-id: ${{env.CLIENT_ID}}
+        client-secret: ${{ secrets.PowerPlatformSPN }}
+        tenant-id: ${{env.TENANT_ID}}
+        path: out/exported/Ribbom.zip
+        checker-logs-artifact-name: out/checks/Ribbom.zip

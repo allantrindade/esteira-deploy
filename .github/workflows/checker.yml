@@ -40,7 +40,7 @@ jobs:
         lfs: true
         
     - name: export-solution action
-      uses: microsoft/powerplatform-actions/export-solution@latest
+      uses: microsoft/powerplatform-actions/export-solution@v0
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
         app-id: ${{env.CLIENT_ID}}
@@ -52,7 +52,7 @@ jobs:
         overwrite: true
         
     - name: check-solution action
-      uses: microsoft/powerplatform-actions/check-solution@latest
+      uses: microsoft/powerplatform-actions/check-solution@v0
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
         app-id: ${{env.CLIENT_ID}}

@@ -2,7 +2,7 @@ name: export-and-branch-solution
 
 on:
   repository_dispatch:
-    types: 'export-solution'
+    types: [export-solution]
     inputs:
       request_id:
         description: 'id of the request to worked on from Power Platform'

@@ -39,16 +39,6 @@ jobs:
       with:
         lfs: true
         
-    - name: set-online-solution-version action
-      uses: microsoft/powerplatform-actions/set-online-solution-version@latest
-      with:
-        environment-url: ${{env.ENVIRONMENT_URL}}
-        app-id: ${{env.CLIENT_ID}}
-        client-secret: ${{ secrets.PowerPlatformSPN }}
-        tenant-id: ${{env.TENANT_ID}}
-        name: ${{ github.event.inputs.solution_name }}
-        version: ${{ github.event.inputs.solution_version }}
-        
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@latest
       with:

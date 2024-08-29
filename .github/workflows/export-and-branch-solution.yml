@@ -1,7 +1,8 @@
 name: export-and-branch-solution
 
 on:
-  workflow_dispatch:
+  repository_dispatch:
+    types: 'export-solution'
     inputs:
       request_id:
         description: 'id of the request to worked on from Power Platform'

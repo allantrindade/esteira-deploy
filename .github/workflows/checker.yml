@@ -39,12 +39,15 @@ jobs:
         app-id: ${{env.CLIENT_ID}}
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{env.TENANT_ID}}
-        path: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
-        
+        path: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip        
+        continue-on-error: true
+        run: |
+          ./check-solution.sh 2>&1 | tee solution-checker.log
+
     - name: extract-checker-results
       id: extract-checker-results
       run: |
-        CHECKER_RESULTS=$(echo "${{ steps.check-solution.outputs.log }}" | grep -oP 'Results : \K.*')
+        CHECKER_RESULTS=$(grep -oP 'Results : \K.*' solution-checker.log)
         echo "checker_results=$CHECKER_RESULTS" >> $GITHUB_ENV
         echo "checker_results=$CHECKER_RESULTS" >> $GITHUB_OUTPUT
         

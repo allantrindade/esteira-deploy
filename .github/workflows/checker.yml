@@ -44,7 +44,7 @@ jobs:
     - name: extract-checker-results
       id: extract-checker-results
       run: |
-        CHECKER_RESULTS=$(grep -oP 'Results : \K.*' /home/runner/work/_temp/PowerAppsChecker/checker-output/*.log)
+        CHECKER_RESULTS=$(grep -oP 'Results : \K.*' /home/runner/work/_temp/PowerAppsChecker/checker-output)
         echo "checker_results=$CHECKER_RESULTS" >> $GITHUB_ENV
 
     - name: download-checker-results

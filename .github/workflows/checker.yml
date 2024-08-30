@@ -44,6 +44,7 @@ jobs:
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{env.TENANT_ID}}
         path: ${{ github.event.inputs.solution_exported_folder }}/${{ github.event.inputs.solution_name }}.zip
+        save-results: true
 
     - name: print action
       run: |

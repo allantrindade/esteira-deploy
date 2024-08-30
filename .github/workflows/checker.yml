@@ -43,18 +43,17 @@ jobs:
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{env.TENANT_ID}}
         path: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip        
-        continue-on-error: true
-        run: |
-          ./check-solution.sh 2>&1 | tee solution-checker.log
-
-    - name: extract-checker-results
-      id: extract-checker-results
-      run: |
-        CHECKER_RESULTS=$(grep -oP 'Results : \K.*' solution-checker.log)
-        echo "checker_results=$CHECKER_RESULTS" >> $GITHUB_ENV
-        echo "checker_results=$CHECKER_RESULTS" >> $GITHUB_OUTPUT
         
-    - name: commit 
+    - name: capture-logs action   
+      run: |
+          ./checker-from-dev.sh 2>&1 | tee check-solution.log
+
+    - name: extract-checker-results action
+      run: |
+        CHECKER_RESULTS=$(grep -oP 'Results : \K.*' check-solution.log)
+        echo "checker_results=$CHECKER_RESULTS" >> $GITHUB_ENV
+        
+    - name: commit action
       run: |
         git fetch --all 
         git config --global user.email "no-reply@github.com"

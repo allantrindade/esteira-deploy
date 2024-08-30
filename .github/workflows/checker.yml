@@ -9,9 +9,6 @@ on:
       solution_name:
         description: 'name of the solution to worked on from Power Platform'
         required: true
-      solution_version:
-        description: 'version of the solution to worked on from Power Platform'
-        required: true
       solution_exported_folder:
         description: 'folder name for staging the exported solution'
         required: true
@@ -29,13 +26,13 @@ permissions:
   contents: write
 jobs:
   checker-from-dev:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     env:
       RUNNER_DEBUG: 1
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         lfs: true
         

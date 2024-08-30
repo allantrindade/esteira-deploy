@@ -40,20 +40,13 @@ jobs:
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{env.TENANT_ID}}
         path: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
-
-    - name: ls 
-      run: |
-        ls /home/runner/work/_temp/PowerAppsChecker/checker-output
         
     - name: extract-checker-results
       id: extract-checker-results
       run: |
-        CHECKER_RESULTS=$(grep -oP 'Results : \K.*' /home/runner/work/_temp/PowerAppsChecker/checker-output/*.log)
+        CHECKER_RESULTS=$(echo "${{ steps.check-solution.outputs.log }}" | grep -oP 'Results : \K.*')
         echo "checker_results=$CHECKER_RESULTS" >> $GITHUB_ENV
-
-    - name: download-checker-results
-      run: |
-        echo "Downloading checker results from: ${{ env.checker_results }}"
+        echo "checker_results=$CHECKER_RESULTS" >> $GITHUB_OUTPUT
         
     - name: commit 
       run: |

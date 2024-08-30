@@ -47,8 +47,8 @@ jobs:
 
     - name: print action
       run: |
-        echo ${{ steps.powerapps-checker }}
-        echo ${{ steps.powerapps-checker.outputs }}
+        echo ${{ steps.powerapps-checker }} | jq .
+        echo ${{ steps.powerapps-checker.outputs }} | jq .
       
     - name: commit 
       run: |

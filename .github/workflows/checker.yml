@@ -12,11 +12,7 @@ on:
       solution_exported_folder:
         description: 'folder name for staging the exported solution'
         required: true
-        default: solutions/
-      check_exported_folder:
-        description: 'folder name for staging the exported check'
-        required: true
-        default: checks        
+        default: solutions/      
 env:
   ENVIRONMENT_URL: 'https://ava-powerplatform-dev.crm.dynamics.com'
   CLIENT_ID: '03f7f8a4-7b34-4f76-8c12-90a1565ca4fb'
@@ -64,7 +60,12 @@ jobs:
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{env.TENANT_ID}}
         path: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
-        checker-logs-artifact-name: ${{ github.event.inputs.check_exported_folder }}
+
+    - name: download-artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: CheckSolutionLogs
+        path: ./downloaded-artifacts    
         
     - name: commit 
       run: |
@@ -72,5 +73,5 @@ jobs:
         git config --global user.email "no-reply@github.com"
         git config --global user.name "GitHub Actions"
         git add --all 
-        git commit -m "Exported solution ${{ github.event.inputs.solution_name }} at $(date +'%d/%m/%Y %H:%M:%S')"
+        git commit -m "Exported solution ${{ github.event.inputs.solution_name }} at $(TZ=America/Sao_Paulo date +'%d/%m/%Y %H:%M:%S')"
         git push

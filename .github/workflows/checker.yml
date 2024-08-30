@@ -68,7 +68,6 @@ jobs:
         tenant-id: ${{env.TENANT_ID}}
         path: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
         checker-logs-artifact-name: ${{ github.event.inputs.check_exported_folder }}
-        save-results: true
         
     - name: commit 
       run: |

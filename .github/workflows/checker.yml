@@ -28,12 +28,11 @@ jobs:
       RUNNER_DEBUG: 1
 
     steps:
-    - uses: actions/checkout@v3
-      with:
-        lfs: true
+    - name: Install Power Platform Tools
+      uses: microsoft/powerplatform-actions/actions-install@v1
         
     - name: check-solution action
-      uses: microsoft/powerplatform-actions/check-solution@v0
+      uses: microsoft/powerplatform-actions/check-solution@v1
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
         app-id: ${{env.CLIENT_ID}}

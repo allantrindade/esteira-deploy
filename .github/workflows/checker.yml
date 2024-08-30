@@ -45,10 +45,13 @@ jobs:
         tenant-id: ${{env.TENANT_ID}}
         path: ${{ github.event.inputs.solution_exported_folder }}/${{ github.event.inputs.solution_name }}.zip
 
+    - name: Install jq
+      run: sudo apt-get install jq
+
     - name: print action
       run: |
         echo ${{ steps.powerapps-checker }} | jq .
-        echo ${{ steps.powerapps-checker.outputs }} | jq .
+        echo ${{ steps.powerapps-checker.outputs.results }}
       
     - name: commit 
       run: |

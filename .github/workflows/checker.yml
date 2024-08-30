@@ -60,11 +60,12 @@ jobs:
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{env.TENANT_ID}}
         path: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
-        run: |
-          ./check-solution.sh 2>&1 | tee check-solution.log
+        
+    - name: capture-check-solution-log
+      run: |
+        actions/bin/entrypoint.sh 2>&1 | tee check-solution.log
 
     - name: extract-checker-results
-      id: extract-checker-results
       run: |
         CHECKER_RESULTS=$(grep -oP 'Results : \K.*' check-solution.log)
         echo "checker_results=$CHECKER_RESULTS" >> $GITHUB_ENV

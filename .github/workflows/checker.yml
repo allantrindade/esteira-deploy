@@ -46,7 +46,7 @@ jobs:
        
     - name: ls   
       run: |
-          ls ./scripts/
+          ls
           
     - name: capture-logs action   
       run: |

@@ -46,7 +46,9 @@ jobs:
         path: ${{ github.event.inputs.solution_exported_folder }}/${{ github.event.inputs.solution_name }}.zip
 
     - name: print action
-      run: echo ${{ steps.powerapps-checker.outputs }}
+      run: |
+        echo ${{ steps.powerapps-checker }}
+        echo ${{ steps.powerapps-checker.outputs }}
       
     - name: commit 
       run: |

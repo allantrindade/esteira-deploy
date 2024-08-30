@@ -32,6 +32,9 @@ jobs:
       with:
         lfs: true
         
+    - name: install-power-platform-tools action
+      uses: microsoft/powerplatform-actions/actions-install@v1 
+      
     - name: check-solution action
       id: powerapps-checker
       uses: microsoft/powerplatform-actions/check-solution@v1

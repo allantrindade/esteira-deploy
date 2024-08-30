@@ -43,10 +43,14 @@ jobs:
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{env.TENANT_ID}}
         path: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip        
-        
+       
+    - name: ls   
+      run: |
+          ls ./scripts/
+          
     - name: capture-logs action   
       run: |
-          ./solution-checker.sh 2>&1 | tee check-solution.log
+          ./scripts/solution-checker.sh 2>&1 | tee check-solution.log
 
     - name: extract-checker-results action
       run: |

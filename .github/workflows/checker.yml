@@ -49,7 +49,8 @@ jobs:
       run: |
         mkdir -p logs
         echo "Capturando logs da verificação de solução..." > logs/solution-check.log
-        cat results/powerapps-checker.json >> logs/solution-check.log || echo "Erro ao capturar logs."
+        # Capturando stdout dos logs para o arquivo
+        (./run-action.sh 2>&1) | tee -a logs/solution-check.log || echo "Erro ao capturar logs."
       
     - name: commit 
       run: |

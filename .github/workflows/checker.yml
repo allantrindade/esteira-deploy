@@ -44,12 +44,12 @@ jobs:
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{env.TENANT_ID}}
         path: ${{ github.event.inputs.solution_exported_folder }}/${{ github.event.inputs.solution_name }}.zip
-        save-results: true
-
-    - name: print action
+        
+    - name: Capture Logs
       run: |
-        printf '%s\n' "${{ toJson(steps.powerapps-checker) }}"
-        printf '%s\n' "${{ toJson(steps.powerapps-checker.outputs) }}"
+        mkdir -p logs
+        echo "Capturando logs da verificação de solução..." > logs/solution-check.log
+        cat results/powerapps-checker.json >> logs/solution-check.log || echo "Erro ao capturar logs."
       
     - name: commit 
       run: |

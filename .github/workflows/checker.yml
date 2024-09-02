@@ -45,12 +45,11 @@ jobs:
         tenant-id: ${{env.TENANT_ID}}
         path: ${{ github.event.inputs.solution_exported_folder }}/${{ github.event.inputs.solution_name }}.zip
         
-    - name: Capture Logs
-      run: |
-        mkdir -p logs
-        echo "Capturando logs da verificação de solução..." > logs/solution-check.log
-        # Capturando stdout dos logs para o arquivo
-        (./run-action.sh 2>&1) | tee -a logs/solution-check.log || echo "Erro ao capturar logs."
+    - name: Download Artifact to Specific Directory
+      uses: actions/download-artifact@v3
+      with:
+        name: CheckSolutionLogs
+        path: logs/
       
     - name: commit 
       run: |
